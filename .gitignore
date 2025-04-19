@@ -1,0 +1,9 @@
+# Environment variables
+backend/.env
+
+# Dependencies
+backend/node_modules/
+frontend/node_modules/
+
+# Optional: macOS folder attributes
+.DS_Store
