@@ -1,0 +1,273 @@
+/* General Top Bar Styles - Reverted Position & Colors */
+.top-bar {
+  position: fixed; /* Reverted */
+  top: 0;        /* Reverted */
+  left: 240px;   /* Reverted */
+  right: 0;      /* Reverted */
+  height: 60px;  /* Reverted */
+  background-color: #A0522D; /* Reverted - Sienna background */
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10; /* Reverted */
+  box-sizing: border-box;
+  color: #5C4033; /* Reverted - Default text color */
+}
+
+.top-bar-empty {
+  /* Optional: styles for when no track is playing */
+  /* Keep consistent background or adjust as needed */
+  background-color: #A0522D;
+}
+
+/* Left Section: Track Info - Adjusted Styles */
+.top-bar-track-info {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* Don't shrink */
+  /* Adjust flex-basis or max-width if needed */
+   max-width: 35%;
+}
+
+.top-bar-track-cover {
+  width: 40px; /* Reverted size */
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px; /* Reverted margin */
+  border-radius: 3px; /* Reverted radius */
+  background-color: #8B4513; /* Placeholder color */
+}
+
+.top-bar-track-cover-placeholder {
+  width: 40px; /* Reverted size */
+  height: 40px;
+  background-color: #E0D6C4; /* Reverted - Muted beige */
+  margin-right: 10px; /* Reverted margin */
+  border-radius: 3px; /* Reverted radius */
+}
+
+.top-bar-track-details {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 180px; /* Adjust as needed */
+}
+
+.top-bar-track-title {
+  font-size: 0.85rem; /* Reverted size */
+  font-weight: 500;
+  color: #F5F5DC; /* Changed to Beige for contrast */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* margin-bottom: 0; */ /* Removed extra margin */
+}
+
+.top-bar-track-episode { /* Used for creator name */
+  font-size: 0.7rem; /* Reverted size */
+  color: #E0D6C4; /* Changed to Muted Beige for contrast */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Center Section: Player Controls & Progress - Adjusted Styles */
+.top-bar-center-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* Allow center to grow */
+  margin: 0 15px; /* Adjust spacing */
+  min-width: 250px; /* Ensure minimum space */
+}
+
+.player-buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; /* Reduced space */
+}
+
+/* General button style (like, skip) */
+.player-control-button {
+  background: none;
+  border: none;
+  color: #8B4513; /* Reverted - Saddle Brown */
+  font-size: 1.1rem; /* Adjusted size */
+  cursor: pointer;
+  padding: 6px; /* Adjust padding */
+  margin: 0 6px; /* Adjust margin */
+  transition: color 0.2s ease;
+}
+.player-control-button:hover {
+  color: #5C4033; /* Reverted - Dark Brown */
+}
+.player-control-button:disabled {
+  color: #D2B48C; /* Tan disabled */
+  cursor: not-allowed;
+}
+
+.player-play-button {
+  background-color: #5C4033; /* Reverted - Dark Brown */
+  color: #F5F5DC; /* Reverted - Beige */
+  border: none;
+  border-radius: 50%;
+  width: 36px; /* Keep size */
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem; /* Keep size */
+  margin: 0 12px; /* Reverted margin */
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+.player-play-button:hover {
+  transform: scale(1.05);
+  background-color: #8B4513; /* Saddle brown on hover */
+}
+
+.player-progress-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 450px; /* Limit progress bar width */
+}
+
+.player-time {
+  font-size: 0.75rem; /* Reverted size */
+  color: #F5F5DC; /* Changed to Beige for contrast */
+  min-width: 35px; /* Reverted width */
+  text-align: center;
+}
+.player-time.current-time {
+  text-align: right;
+  margin-right: 8px; /* Reverted margin */
+}
+.player-time.duration {
+  text-align: left;
+  margin-left: 8px; /* Reverted margin */
+}
+
+/* Custom Range Input Styles (Progress Bar) - Reverted Colors */
+.player-progress-bar {
+  flex-grow: 1;
+  height: 4px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  /* Use original theme colors */
+  background: linear-gradient(to right, #5C4033 var(--progress, 0%), #D2B48C var(--progress, 0%)); /* Dark brown fill, Tan track */
+  border-radius: 2px;
+  outline: none;
+  transition: background 0.1s ease;
+}
+/* Thumb - Reverted Colors */
+.player-progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #F5F5DC; /* Beige thumb */
+  border: 1px solid #8B4513; /* Saddle brown border */
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -5px;
+  /* opacity: 0; */ /* Removed: Make thumb always visible */
+  /* transition: opacity 0.2s ease; */ /* Removed */
+}
+.player-progress-bar::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #F5F5DC; /* Beige thumb */
+  border: 1px solid #8B4513; /* Saddle brown border */
+  border-radius: 50%;
+  cursor: pointer;
+  /* opacity: 0; */ /* Removed: Make thumb always visible */
+  /* transition: opacity 0.2s ease; */ /* Removed */
+}
+/* Show thumb on hover - REMOVED */
+/* .player-progress-container:hover .player-progress-bar::-webkit-slider-thumb,
+.player-progress-container:hover .player-progress-bar::-moz-range-thumb {
+  opacity: 1;
+} */
+
+
+/* Right Section: Like & Volume - Adjusted Styles */
+.top-bar-right-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0; /* Don't shrink */
+   /* Adjust flex-basis or max-width if needed */
+   max-width: 30%;
+}
+
+.like-button {
+  /* Inherits .player-control-button styles */
+  margin-right: 10px; /* Space between like and volume icon */
+  color: #000000; /* Black when unliked */
+}
+.like-button:hover {
+  color: #555555; /* Dark grey hover when unliked */
+}
+.like-button.liked {
+  color: #FF0000; /* Red when liked */
+}
+.like-button.liked:hover {
+  color: #cc0000; /* Darker red hover when liked */
+}
+.like-button:disabled {
+  color: #D2B48C; /* Tan disabled */
+}
+
+.volume-icon {
+  font-size: 1.2rem; /* Reverted size */
+  color: #000000; /* Black */
+  margin-right: 8px; /* Reverted margin */
+  /* Vertical alignment is handled by the flex container (.top-bar-right-controls) */
+}
+
+/* Custom Range Input Styles (Volume Slider) - Reverted Colors */
+.player-volume-slider {
+  width: 80px; /* Reverted width */
+  height: 4px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  /* Use original theme colors */
+  background: linear-gradient(to right, #5C4033 var(--volume, 50%), #D2B48C var(--volume, 50%)); /* Dark brown fill, Tan track */
+  border-radius: 2px;
+  outline: none;
+  transition: background 0.1s ease;
+}
+/* Thumb - Reverted Colors */
+.player-volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #F5F5DC; /* Beige thumb */
+  border: 1px solid #8B4513; /* Saddle brown border */
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px;
+  /* opacity: 0; */ /* Removed: Make thumb always visible */
+  /* transition: opacity 0.2s ease; */ /* Removed */
+}
+.player-volume-slider::-moz-range-thumb {
+   width: 12px;
+  height: 12px;
+  background: #F5F5DC; /* Beige thumb */
+  border: 1px solid #8B4513; /* Saddle brown border */
+  border-radius: 50%;
+  cursor: pointer;
+  /* opacity: 0; */ /* Removed: Make thumb always visible */
+  /* transition: opacity 0.2s ease; */ /* Removed */
+}
+/* Show thumb on hover - REMOVED */
+/* .top-bar-right-controls:hover .player-volume-slider::-webkit-slider-thumb,
+.top-bar-right-controls:hover .player-volume-slider::-moz-range-thumb {
+  opacity: 1;
+} */

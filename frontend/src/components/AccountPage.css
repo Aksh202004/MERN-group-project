@@ -1,0 +1,123 @@
+.account-page {
+  max-width: 700px; /* Limit width */
+  margin: 0 auto; /* Center the content */
+  padding: 20px;
+}
+
+.account-page h1 {
+  color: #5C4033; /* Dark Brown */
+  margin-bottom: 30px;
+  border-bottom: 1px solid #E0D6C4; /* Muted beige border */
+  padding-bottom: 10px;
+}
+
+.account-section {
+  background-color: #FFF8DC; /* Cornsilk background for sections */
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.account-section h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #5C4033; /* Dark Brown */
+  font-size: 1.3rem;
+  border-bottom: 1px solid #E0D6C4;
+  padding-bottom: 8px;
+}
+
+/* Profile Picture Styles */
+.profile-picture-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px; /* Space between image and button */
+}
+
+.profile-picture-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Circular preview */
+  object-fit: cover;
+  border: 3px solid #E0D6C4; /* Muted beige border */
+  background-color: #E0D6C4; /* Placeholder background */
+}
+
+/* Removed .btn-upload-label styles */
+
+
+/* Re-use form-group styles from AuthForm.css if desired, or define here */
+.account-section .form-group {
+  margin-bottom: 18px;
+}
+
+.account-section .form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #8B4513; /* Saddle Brown */
+}
+
+.account-section .form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #D2B48C; /* Tan border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  background-color: #F5F5DC; /* Beige input background */
+  color: #5C4033;
+}
+
+.account-section .form-group input:focus {
+  outline: none;
+  border-color: #A0522D; /* Sienna */
+  box-shadow: 0 0 0 2px rgba(160, 82, 45, 0.15);
+}
+
+.btn-update {
+  padding: 10px 20px;
+  background-color: #5C4033; /* Dark Brown button */
+  color: #F5F5DC; /* Beige text */
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 10px;
+}
+
+.btn-update:hover {
+  background-color: #8B4513; /* Saddle Brown on hover */
+}
+
+.btn-update:disabled {
+  background-color: #A0522D; /* Sienna when disabled */
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #D8000C; /* Red for errors */
+  background-color: #FFD2D2; /* Light red background */
+  border: 1px solid #D8000C;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}
+
+.success-message {
+  color: #270; /* Dark green for success */
+  background-color: #DFF2BF; /* Light green background */
+  border: 1px solid #270;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,285 @@
+.sidebar {
+  background-color: #5C4033; /* Dark Brown background */
+  color: #D2B48C; /* Tan text (adjust as needed) */
+  height: 100vh; /* Full height */
+  width: 240px; /* Fixed width */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Keep it fixed on the left */
+  top: 0;
+  left: 0;
+  box-sizing: border-box; /* Include padding in width */
+  justify-content: space-between; /* Push footer to bottom */
+}
+
+.sidebar-logo a {
+  color: #F5F5DC; /* Beige logo text */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sidebar-search {
+  display: flex;
+  align-items: center;
+  background-color: #8B4513; /* Saddle Brown (adjust as needed) */
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.sidebar-search svg {
+  margin-right: 8px;
+  color: #F5F5DC; /* Beige icon */
+}
+
+.sidebar-search input {
+  background: none;
+  border: none;
+  color: #F5F5DC; /* Beige text */
+  outline: none;
+  flex-grow: 1;
+}
+
+.sidebar-search input::placeholder {
+  color: #D2B48C; /* Tan placeholder */
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 15px;
+}
+
+.sidebar-nav a {
+  color: #D2B48C; /* Tan link text */
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active { /* Add active class later */
+  color: #F5F5DC; /* Beige on hover/active */
+}
+
+.sidebar-nav svg {
+  margin-right: 15px;
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
+.sidebar-nav span {
+  font-size: 0.9rem;
+}
+
+/* Recently Listened Section */
+.sidebar-recent {
+  margin-top: 20px; /* Space above the section */
+  padding-top: 15px; /* Space below nav */
+  border-top: 1px solid #8B4513; /* Separator line */
+}
+
+.sidebar-recent h4 {
+  color: #D2B48C; /* Tan heading */
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.sidebar-recent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-recent li {
+  margin-bottom: 8px;
+}
+
+.recent-track-button {
+  background: none;
+  border: none;
+  color: #D2B48C; /* Tan text */
+  text-align: left;
+  padding: 2px 0; /* Minimal padding */
+  cursor: pointer;
+  font-size: 0.85rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+.recent-track-button:hover {
+  color: #F5F5DC; /* Beige on hover */
+}
+
+
+/* Footer Styles */
+.sidebar-footer {
+  margin-top: auto; /* Pushes footer to the bottom */
+  padding-top: 20px; /* Space above footer */
+  border-top: 1px solid #8B4513; /* Saddle Brown border */
+  position: relative; /* Needed for absolute positioning of dropdown */
+}
+
+/* Container for user info and dropdown */
+.sidebar-user-info-container {
+  position: relative; /* Dropdown positioning context */
+}
+
+/* Clickable user info area */
+.sidebar-user-info {
+  display: flex;
+  align-items: center;
+  padding: 10px 0; /* Padding top/bottom */
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-user-info:hover {
+  background-color: rgba(139, 69, 19, 0.2); /* Transparent Saddle Brown */
+}
+
+/* Avatar placeholder */
+.sidebar-user-avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  background-color: #D2B48C; /* Tan */
+  border-radius: 50%;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5C4033; /* Dark Brown */
+  font-weight: bold;
+  font-size: 1.1rem; /* Slightly larger initial */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Style for the actual avatar image */
+.sidebar-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover; /* Ensure image covers the area */
+  flex-shrink: 0;
+}
+
+
+/* Container for name and email */
+.sidebar-user-details {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent text overflow issues */
+}
+
+.sidebar-user-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #F5F5DC; /* Beige */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-user-email {
+  font-size: 0.75rem;
+  color: #D2B48C; /* Tan */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Guest Info */
+.sidebar-guest-info {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #D2B48C; /* Tan */
+}
+
+.sidebar-guest-info .sidebar-user-avatar-placeholder {
+  background-color: #8B4513; /* Saddle Brown for guest */
+  color: #F5F5DC; /* Beige text */
+}
+
+.sidebar-guest-info span {
+  margin-left: 12px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Dropdown Menu */
+.sidebar-user-dropdown {
+  position: absolute;
+  bottom: 100%; /* Position above the footer item */
+  left: 0;
+  width: calc(100% + 40px); /* Extend slightly beyond sidebar padding */
+  margin-left: -20px; /* Counteract sidebar padding */
+  margin-bottom: 10px; /* Space below dropdown */
+  background-color: #8B4513; /* Saddle Brown background */
+  border: 1px solid #A0522D; /* Sienna border */
+  border-radius: 4px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  padding: 8px 0;
+  z-index: 15; /* Ensure it's above sidebar content */
+}
+
+.sidebar-dropdown-item {
+  display: block;
+  padding: 10px 20px; /* Match sidebar padding */
+  color: #F5F5DC; /* Beige text */
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  background: none; /* Ensure button background is transparent */
+  border: none; /* Ensure button border is none */
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sidebar-dropdown-item:hover {
+  background-color: #A0522D; /* Sienna hover */
+}
+
+/* Specific style for the button inside dropdown if needed */
+.sidebar-dropdown-button {
+  /* Inherits .sidebar-dropdown-item styles */
+}
+
+/* Guest Info Container (for hover) */
+.sidebar-guest-info-container {
+  position: relative; /* Needed for absolute positioning of dropdown */
+}
+
+/* Guest Dropdown Menu (appears on hover) */
+.sidebar-guest-dropdown {
+  position: absolute;
+  bottom: 100%; /* Position above the footer item */
+  left: 0;
+  width: calc(100% + 40px); /* Extend slightly beyond sidebar padding */
+  margin-left: -20px; /* Counteract sidebar padding */
+  margin-bottom: 10px; /* Space below dropdown */
+  background-color: #8B4513; /* Saddle Brown background */
+  border: 1px solid #A0522D; /* Sienna border */
+  border-radius: 4px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  padding: 8px 0;
+  z-index: 15; /* Ensure it's above sidebar content */
+  /* Uses same styles as .sidebar-user-dropdown for consistency */
+  /* Dropdown items inherit .sidebar-dropdown-item */
+}

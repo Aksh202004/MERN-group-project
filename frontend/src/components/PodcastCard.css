@@ -1,0 +1,144 @@
+.podcast-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Ensure link takes up card space */
+}
+
+.podcast-card {
+  background-color: #FFF8DC; /* Cornsilk - slightly warmer beige */
+  border-radius: 8px;
+  padding: 16px;
+  transition: background-color 0.2s ease-in-out;
+  position: relative; /* For positioning play button and badge */
+  overflow: hidden; /* Ensure content stays within rounded corners */
+}
+
+.podcast-card:hover {
+  background-color: #F5F5DC; /* Beige on hover */
+}
+
+.podcast-card:hover .podcast-card-play-button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.podcast-card-image-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+  padding-top: 100%; /* Creates a square aspect ratio */
+  background-color: #E0D6C4; /* Muted beige placeholder */
+  border-radius: 4px;
+  overflow: hidden; /* Keep image within bounds */
+}
+
+.podcast-card-image,
+.podcast-card-placeholder-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area */
+}
+
+.podcast-card-placeholder-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem; /* Adjust icon size */
+  color: #A0522D; /* Sienna icon */
+}
+
+.podcast-card-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #8B4513; /* Saddle Brown */
+  color: #F5F5DC; /* Beige text */
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.podcast-card-play-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #8B4513; /* Saddle Brown */
+  color: #F5F5DC; /* Beige icon */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0; /* Hidden by default */
+  transform: translateY(10px); /* Start slightly lower */
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.podcast-card-info {
+  /* Styles for title, creator etc. */
+}
+
+.podcast-card-title {
+  color: #5C4033; /* Dark Brown */
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ... if too long */
+}
+
+.podcast-card-creator {
+  color: #8B4513; /* Saddle Brown */
+  font-size: 0.85rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.podcast-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.podcast-card-tag {
+  background-color: #D2B48C; /* Tan */
+  color: #5C4033; /* Dark Brown text */
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+}
+
+.podcast-card-favorite-button {
+  background: none;
+  border: none;
+  color: #A0522D; /* Sienna (Default color) */
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.podcast-card-favorite-button:hover {
+  color: #5C4033; /* Dark Brown on hover */
+}
+
+/* Styles for liked state */
+.podcast-card-favorite-button.liked {
+  color: #FF0000; /* Red when liked */
+}
+
+.podcast-card-favorite-button.liked:hover {
+  color: #cc0000; /* Darker red on hover when liked */
+}

@@ -1,0 +1,17 @@
+.library-page {
+  padding: 20px; /* Add some padding around the page content */
+}
+
+.library-page h2 {
+  color: #5C4033; /* Dark Brown */
+  margin-bottom: 20px;
+}
+
+.library-page .error-message {
+  color: #dc3545; /* Standard error color */
+  font-weight: bold;
+}
+
+.library-page p {
+    color: #8B4513; /* Saddle Brown */
+}

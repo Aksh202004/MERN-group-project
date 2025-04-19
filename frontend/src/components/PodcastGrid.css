@@ -1,0 +1,31 @@
+.podcast-grid-section {
+  margin-bottom: 30px; /* Space below the grid section */
+}
+
+.podcast-grid-title {
+  color: #5C4033; /* Dark Brown */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.podcast-grid {
+  display: grid;
+  /* Adjust the number of columns and gap based on desired layout and screen size */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+}
+
+/* Media queries can be added here for different screen sizes */
+/* Example: More columns on larger screens */
+@media (min-width: 992px) {
+  .podcast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .podcast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
